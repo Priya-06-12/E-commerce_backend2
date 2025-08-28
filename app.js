@@ -1,5 +1,5 @@
 
-
+const cors = require("cors")
 const express = require('express');
 const app = express();
 const errorMiddleware = require('./middlewares/error');
@@ -12,6 +12,11 @@ dotenv.config({path:path.join(__dirname,"config/.env")});
 
 
 app.use(express.json());
+
+app.use(cors({
+    origin:"https://e-commerce-frontend-five-sable.vercel.app",
+    credentials:true,
+}))
 app.use(cookieParser());
 
 app.use('/uploads', express.static(path.join(__dirname,'uploads') ) )
