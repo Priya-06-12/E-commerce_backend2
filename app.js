@@ -14,7 +14,7 @@ dotenv.config({path:path.join(__dirname,"config/.env")});
 app.use(express.json());
 
 app.use(cors({
-    origin:"https://e-commerce-frontend-five-sable.vercel.app",
+    origin:"https://e-commerce-frontend-6nhrcyquz-priyas-projects-b1597b71.vercel.app/",
     credentials:true,
 }))
 app.use(cookieParser());
