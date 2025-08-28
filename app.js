@@ -8,7 +8,7 @@ const path = require('path')
 const dotenv = require('dotenv');
 
 
-dotenv.config({path:path.join(__dirname,"config/config.env")});
+dotenv.config({path:path.join(__dirname,"config/.env")});
 
 
 app.use(express.json());
