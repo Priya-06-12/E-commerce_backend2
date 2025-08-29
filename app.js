@@ -14,7 +14,7 @@ dotenv.config({path:path.join(__dirname,"config/.env")});
 app.use(express.json());
 
 app.use(cors({
-    origin:"https://e-commerce-frontend-zy2z.vercel.app/",
+    origin:"process.env.FRONTEND_URL",
     credentials:true,
 }))
 app.use(cookieParser());
